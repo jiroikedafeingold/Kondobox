@@ -20,7 +20,26 @@
 		AA00000B /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB00000C /* ConfettiView.swift */; };
 		AA00000C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AB00000D /* Localizable.xcstrings */; };
 		AA00000D /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AB00000E /* InfoPlist.xcstrings */; };
+		AA100001 /* ShoeboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB100001 /* ShoeboxTests.swift */; };
+		AA200001 /* ShoeboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB200001 /* ShoeboxUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE100001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF000001;
+			remoteInfo = Shoebox;
+		};
+		AE200001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF000001;
+			remoteInfo = Shoebox;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AB000001 /* ShoeboxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeboxApp.swift; sourceTree = "<group>"; };
@@ -37,11 +56,29 @@
 		AB00000C /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 		AB00000D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		AB00000E /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
-		AC000001 /* Shoebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB100001 /* ShoeboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeboxTests.swift; sourceTree = "<group>"; };
+		AB200001 /* ShoeboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeboxUITests.swift; sourceTree = "<group>"; };
+		AC000001 /* Kondobox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kondobox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC100001 /* ShoeboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC200001 /* ShoeboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoeboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AD000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD100001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD200001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				AE000002 /* Shoebox */,
+				AE000004 /* ShoeboxTests */,
+				AE000005 /* ShoeboxUITests */,
 				AE000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,8 +113,8 @@
 				AB00000C /* ConfettiView.swift */,
 				AB000009 /* Assets.xcassets */,
 				AB00000A /* Info.plist */,
-			AB00000D /* Localizable.xcstrings */,
-			AB00000E /* InfoPlist.xcstrings */,
+				AB00000D /* Localizable.xcstrings */,
+				AB00000E /* InfoPlist.xcstrings */,
 			);
 			path = Shoebox;
 			sourceTree = "<group>";
@@ -83,9 +122,27 @@
 		AE000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC000001 /* Shoebox.app */,
+				AC000001 /* Kondobox.app */,
+				AC100001 /* ShoeboxTests.xctest */,
+				AC200001 /* ShoeboxUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AE000004 /* ShoeboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB100001 /* ShoeboxTests.swift */,
+			);
+			path = ShoeboxTests;
+			sourceTree = "<group>";
+		};
+		AE000005 /* ShoeboxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB200001 /* ShoeboxUITests.swift */,
+			);
+			path = ShoeboxUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,8 +162,42 @@
 			);
 			name = Shoebox;
 			productName = Shoebox;
-			productReference = AC000001 /* Shoebox.app */;
+			productReference = AC000001 /* Kondobox.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AF100001 /* ShoeboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1100001 /* Build configuration list for PBXNativeTarget "ShoeboxTests" */;
+			buildPhases = (
+				B0100001 /* Sources */,
+				AD100001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE100002 /* PBXTargetDependency */,
+			);
+			name = ShoeboxTests;
+			productName = ShoeboxTests;
+			productReference = AC100001 /* ShoeboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF200001 /* ShoeboxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1200001 /* Build configuration list for PBXNativeTarget "ShoeboxUITests" */;
+			buildPhases = (
+				B0200001 /* Sources */,
+				AD200001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE200002 /* PBXTargetDependency */,
+			);
+			name = ShoeboxUITests;
+			productName = ShoeboxUITests;
+			productReference = AC200001 /* ShoeboxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -120,6 +211,14 @@
 				TargetAttributes = {
 					AF000001 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					AF100001 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AF000001;
+					};
+					AF200001 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AF000001;
 					};
 				};
 			};
@@ -146,6 +245,8 @@
 			projectRoot = "";
 			targets = (
 				AF000001 /* Shoebox */,
+				AF100001 /* ShoeboxTests */,
+				AF200001 /* ShoeboxUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -181,7 +282,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B0100001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA100001 /* ShoeboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0200001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA200001 /* ShoeboxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE100002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF000001 /* Shoebox */;
+			targetProxy = AE100001 /* PBXContainerItemProxy */;
+		};
+		AE200002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF000001 /* Shoebox */;
+			targetProxy = AE200001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C1000001 /* Debug */ = {
@@ -306,13 +436,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TJ8LYQ4D36;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shoebox/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Shoebox;
+				INFOPLIST_KEY_CFBundleDisplayName = Kondobox;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Kondobox needs permission to create and add photos to albums.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Kondobox needs access to your photo library to display photos for review and save favorites to an album.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -322,9 +455,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shoebox.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kondobox.app;
+				PRODUCT_NAME = Kondobox;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -338,13 +472,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TJ8LYQ4D36;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shoebox/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Shoebox;
+				INFOPLIST_KEY_CFBundleDisplayName = Kondobox;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Kondobox needs permission to create and add photos to albums.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Kondobox needs access to your photo library to display photos for review and save favorites to an album.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -354,14 +491,93 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shoebox.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kondobox.app;
+				PRODUCT_NAME = Kondobox;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TJ8LYQ4D36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kondobox.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kondobox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kondobox";
+			};
+			name = Debug;
+		};
+		C3000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TJ8LYQ4D36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kondobox.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kondobox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kondobox";
+			};
+			name = Release;
+		};
+		C4000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TJ8LYQ4D36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kondobox.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Shoebox;
+			};
+			name = Debug;
+		};
+		C4000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TJ8LYQ4D36;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kondobox.app.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Shoebox;
 			};
 			name = Release;
 		};
@@ -382,6 +598,24 @@
 			buildConfigurations = (
 				C1000001 /* Debug */,
 				C1000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1100001 /* Build configuration list for PBXNativeTarget "ShoeboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3000001 /* Debug */,
+				C3000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1200001 /* Build configuration list for PBXNativeTarget "ShoeboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4000001 /* Debug */,
+				C4000002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

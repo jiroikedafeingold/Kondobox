@@ -27,7 +27,7 @@ struct OnboardingView: View {
             )
             .ignoresSafeArea()
 
-            VStack {
+            VStack(spacing: 0) {
                 TabView(selection: $currentPage) {
                     welcomePage.tag(0)
                     photosPermissionPage.tag(1)
@@ -36,6 +36,77 @@ struct OnboardingView: View {
                 }
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
+
+                pageButton
+                    .padding(.horizontal, 32)
+                    .padding(.bottom, 32)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var pageButton: some View {
+        switch currentPage {
+        case 0:
+            Button { withAnimation { currentPage = 1 } } label: {
+                Text("Next")
+                    .font(.headline)
+                    .foregroundStyle(.purple)
+                    .padding()
+            }
+        case 1:
+            Button {
+                if photoManager.isAuthorized {
+                    withAnimation { currentPage = 2 }
+                } else {
+                    Task {
+                        await photoManager.requestAuthorization()
+                        withAnimation { currentPage = 2 }
+                    }
+                }
+            } label: {
+                Text("Continue")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background(Color.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+            }
+        case 2:
+            Button {
+                if notificationManager.isAuthorized {
+                    withAnimation { currentPage = 3 }
+                } else {
+                    Task {
+                        await notificationManager.requestAuthorization()
+                        withAnimation { currentPage = 3 }
+                    }
+                }
+            } label: {
+                Text("Continue")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background(Color.orange)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+            }
+        default:
+            Button { withAnimation { hasCompletedOnboarding = true } } label: {
+                Text("Get Started")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background(
+                        LinearGradient(
+                            colors: [.blue, .purple],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
             }
         }
     }
@@ -56,18 +127,16 @@ struct OnboardingView: View {
                     )
                 )
 
-            Text("Welcome to Shoebox")
+            Text("Welcome to Kondobox")
                 .font(.system(size: 32, weight: .bold, design: .rounded))
 
-            Text("Declutter your photo library with simple swipe gestures. Review 10 photos each week and keep your memories organized.")
+            Text("Declutter your photo library with simple swipe gestures. Review 20 photos each week and keep your memories organized.")
                 .font(.body)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
             Spacer()
-
-            nextButton(page: 0)
         }
         .padding()
     }
@@ -83,7 +152,7 @@ struct OnboardingView: View {
             Text("Access Your Photos")
                 .font(.title.bold())
 
-            Text("Shoebox needs access to your photo library to show you images for review and to manage albums.")
+            Text("Kondobox needs access to your photo library to show you images for review and to manage albums.")
                 .font(.body)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
@@ -97,25 +166,6 @@ struct OnboardingView: View {
             }
 
             Spacer()
-
-            if !photoManager.isAuthorized {
-                Button {
-                    Task {
-                        await photoManager.requestAuthorization()
-                    }
-                } label: {
-                    Text("Allow Photo Access")
-                        .font(.headline)
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 16)
-                        .background(Color.blue)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                }
-                .padding(.horizontal, 32)
-            }
-
-            nextButton(page: 1)
         }
         .padding()
     }
@@ -145,25 +195,6 @@ struct OnboardingView: View {
             }
 
             Spacer()
-
-            if !notificationManager.isAuthorized {
-                Button {
-                    Task {
-                        await notificationManager.requestAuthorization()
-                    }
-                } label: {
-                    Text("Enable Notifications")
-                        .font(.headline)
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 16)
-                        .background(Color.orange)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                }
-                .padding(.horizontal, 32)
-            }
-
-            nextButton(page: 2)
         }
         .padding()
     }
@@ -188,47 +219,11 @@ struct OnboardingView: View {
             .padding(.horizontal, 32)
 
             Spacer()
-
-            Button {
-                withAnimation {
-                    hasCompletedOnboarding = true
-                }
-            } label: {
-                Text("Get Started")
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
-                    .background(
-                        LinearGradient(
-                            colors: [.blue, .purple],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-            }
-            .padding(.horizontal, 32)
-            .padding(.bottom, 20)
         }
         .padding()
     }
 
     // MARK: - Helpers
-
-    private func nextButton(page: Int) -> some View {
-        Button {
-            withAnimation {
-                currentPage = page + 1
-            }
-        } label: {
-            Text("Next")
-                .font(.headline)
-                .foregroundStyle(.purple)
-                .padding()
-        }
-        .padding(.bottom, 20)
-    }
 
     private func featureRow(icon: String, color: Color, text: LocalizedStringKey) -> some View {
         HStack(spacing: 14) {

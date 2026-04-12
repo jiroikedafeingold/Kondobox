@@ -14,13 +14,16 @@ import SwiftUI
 
 struct ReviewView: View {
     @EnvironmentObject var photoManager: PhotoManager
-    @AppStorage("photosPerSession") private var photosPerSession = 10
+    @AppStorage("photosPerSession") private var photosPerSession = 20
     @State private var reviewComplete = false
     @State private var showConfetti = false
     @State private var celebrationScale: CGFloat = 0.3
     @State private var celebrationOpacity: Double = 0
     @State private var stats = ReviewStats()
     @State private var allPhotosReviewed = false
+    @State private var history: [(item: PhotoItem, direction: PhotoCardView.SwipeDirection)] = []
+    @State private var shareImage: UIImage?
+    @State private var showShareSheet = false
 
     struct ReviewStats {
         var kept = 0
@@ -58,6 +61,17 @@ struct ReviewView: View {
             // Confetti overlay
             ConfettiView(trigger: showConfetti)
                 .ignoresSafeArea()
+        }
+        .onChange(of: photoManager.photos.isEmpty) {
+            if !photoManager.photos.isEmpty && (reviewComplete || allPhotosReviewed) {
+                reviewComplete = false
+                allPhotosReviewed = false
+                showConfetti = false
+                celebrationScale = 0.3
+                celebrationOpacity = 0
+                stats = ReviewStats()
+                history = []
+            }
         }
     }
 
@@ -138,14 +152,67 @@ struct ReviewView: View {
     }
 
     private var swipeHintsView: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: 16) {
+            backButton
             actionButton(icon: "hand.point.left.fill", text: "Keep", color: .green, direction: .left)
             actionButton(icon: "hand.point.up.fill", text: "Delete", color: .red, direction: .up)
             actionButton(icon: "hand.point.down.fill", text: "Fave", color: .yellow, direction: .down)
             actionButton(icon: "hand.draw.fill", text: "Save", color: .blue, direction: .right)
+            shareButton
         }
         .padding(.bottom, 24)
         .padding(.top, 12)
+        .sheet(isPresented: $showShareSheet) {
+            if let shareImage {
+                ShareSheet(items: [shareImage])
+            }
+        }
+    }
+
+    private var backButton: some View {
+        Button {
+            goBack()
+        } label: {
+            VStack(spacing: 6) {
+                Image(systemName: "arrow.uturn.backward")
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundStyle(.purple)
+                    .frame(width: 44, height: 44)
+                    .background(Color.purple.opacity(0.12))
+                    .clipShape(Circle())
+                Text("Back")
+                    .font(.caption2.weight(.medium))
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .disabled(history.isEmpty)
+        .opacity(history.isEmpty ? 0.4 : 1.0)
+    }
+
+    private var shareButton: some View {
+        Button {
+            guard let item = photoManager.photos.first else { return }
+            let size = CGSize(width: 1600, height: 2400)
+            photoManager.loadImage(for: item.asset, targetSize: size) { image in
+                if let image {
+                    shareImage = image
+                    showShareSheet = true
+                }
+            }
+        } label: {
+            VStack(spacing: 6) {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundStyle(.orange)
+                    .frame(width: 44, height: 44)
+                    .background(Color.orange.opacity(0.12))
+                    .clipShape(Circle())
+                Text("Share")
+                    .font(.caption2.weight(.medium))
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .disabled(photoManager.photos.isEmpty)
     }
 
     private func actionButton(icon: String, text: LocalizedStringKey, color: Color, direction: PhotoCardView.SwipeDirection) -> some View {
@@ -163,7 +230,7 @@ struct ReviewView: View {
                     .clipShape(Circle())
                 Text(text)
                     .font(.caption2.weight(.medium))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.secondary)
             }
         }
         .disabled(photoManager.photos.isEmpty)
@@ -230,6 +297,7 @@ struct ReviewView: View {
 
             Button {
                 stats = ReviewStats()
+                history = []
                 reviewComplete = false
                 celebrationScale = 0.3
                 celebrationOpacity = 0
@@ -321,31 +389,72 @@ struct ReviewView: View {
     private func handleSwipe(direction: PhotoCardView.SwipeDirection, item: PhotoItem) {
         switch direction {
         case .right:
+            photoManager.photos.removeAll { $0.id == item.id }
             Task {
-                _ = await photoManager.addToAlbum(item)
-                stats.saved += 1
+                let saved = await photoManager.addToAlbum(item)
+                if saved {
+                    stats.saved += 1
+                    history.append((item: item, direction: direction))
+                } else {
+                    photoManager.photos.insert(item, at: 0)
+                }
                 checkCompletion()
             }
         case .left:
             photoManager.removeFromQueue(item)
             stats.kept += 1
+            history.append((item: item, direction: direction))
             checkCompletion()
         case .up:
+            photoManager.photos.removeAll { $0.id == item.id }
             Task {
                 let deleted = await photoManager.deletePhoto(item)
                 if deleted {
                     stats.deleted += 1
+                    history.append((item: item, direction: direction))
+                } else {
+                    photoManager.photos.insert(item, at: 0)
                 }
                 checkCompletion()
             }
         case .down:
+            photoManager.photos.removeAll { $0.id == item.id }
             Task {
                 let favorited = await photoManager.favoritePhoto(item)
                 if favorited {
                     stats.favorited += 1
+                    history.append((item: item, direction: direction))
+                } else {
+                    photoManager.photos.insert(item, at: 0)
                 }
                 checkCompletion()
             }
+        }
+    }
+
+    private func goBack() {
+        guard let last = history.popLast() else { return }
+
+        // Undo the stat
+        switch last.direction {
+        case .right: stats.saved -= 1
+        case .left: stats.kept -= 1
+        case .up: stats.deleted -= 1
+        case .down: stats.favorited -= 1
+        }
+
+        // Unmark as reviewed so the photo is eligible again
+        photoManager.unmarkReviewed(last.item.id)
+
+        // Re-insert at the front of the queue
+        photoManager.photos.insert(last.item, at: 0)
+
+        // Reset completion state if we were on the done screen
+        if reviewComplete {
+            reviewComplete = false
+            showConfetti = false
+            celebrationScale = 0.3
+            celebrationOpacity = 0
         }
     }
 
@@ -361,4 +470,16 @@ struct ReviewView: View {
             }
         }
     }
+}
+
+// MARK: - Share Sheet
+
+struct ShareSheet: UIViewControllerRepresentable {
+    let items: [Any]
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: items, applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }

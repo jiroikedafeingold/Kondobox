@@ -127,7 +127,6 @@ class PhotoManager: ObservableObject {
                 PHAssetChangeRequest.deleteAssets([item.asset] as NSFastEnumeration)
             }
             markReviewed(item.id)
-            photos.removeAll { $0.id == item.id }
             return true
         } catch {
             print("Failed to delete photo: \(error)")
@@ -135,7 +134,7 @@ class PhotoManager: ObservableObject {
         }
     }
 
-    func addToAlbum(_ item: PhotoItem, albumName: String = "Shoebox") async -> Bool {
+    func addToAlbum(_ item: PhotoItem, albumName: String = "Kondobox") async -> Bool {
         do {
             let album = try await fetchOrCreateAlbum(named: albumName)
             try await PHPhotoLibrary.shared().performChanges {
@@ -143,7 +142,6 @@ class PhotoManager: ObservableObject {
                 addRequest.addAssets([item.asset] as NSFastEnumeration)
             }
             markReviewed(item.id)
-            photos.removeAll { $0.id == item.id }
             return true
         } catch {
             print("Failed to add to album: \(error)")
@@ -170,7 +168,7 @@ class PhotoManager: ObservableObject {
               let collection = PHAssetCollection.fetchAssetCollections(
                 withLocalIdentifiers: [placeholder.localIdentifier], options: nil
               ).firstObject else {
-            throw NSError(domain: "Shoebox", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to create album"])
+            throw NSError(domain: "Kondobox", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to create album"])
         }
 
         return collection
@@ -183,7 +181,6 @@ class PhotoManager: ObservableObject {
                 request.isFavorite = true
             }
             markReviewed(item.id)
-            photos.removeAll { $0.id == item.id }
             return true
         } catch {
             print("Failed to favorite photo: \(error)")
@@ -194,6 +191,13 @@ class PhotoManager: ObservableObject {
     func removeFromQueue(_ item: PhotoItem) {
         markReviewed(item.id)
         photos.removeAll { $0.id == item.id }
+    }
+
+    /// Remove a photo ID from the reviewed set so it can appear in future reviews again.
+    func unmarkReviewed(_ id: String) {
+        var ids = reviewedIDs
+        ids.remove(id)
+        reviewedIDs = ids
     }
 
     /// Returns the total number of photos in the library, usable from any context.
@@ -226,6 +230,7 @@ class PhotoManager: ObservableObject {
     /// Clear the reviewed history so all photos become eligible again.
     func resetReviewHistory() {
         reviewedIDs = []
+        loadRandomPhotos()
     }
 
     /// Mark the current time as the last review.

@@ -16,7 +16,7 @@ struct ContentView: View {
     @EnvironmentObject var photoManager: PhotoManager
     @EnvironmentObject var notificationManager: NotificationManager
     @EnvironmentObject var router: NavigationRouter
-    @AppStorage("photosPerSession") private var photosPerSession = 10
+    @AppStorage("photosPerSession") private var photosPerSession = 20
     @State private var selectedTab = 0
 
     var body: some View {
@@ -73,8 +73,8 @@ struct ContentView: View {
 
 struct HomeView: View {
     @EnvironmentObject var photoManager: PhotoManager
-    @AppStorage("photosPerSession") private var photosPerSession = 10
-    @AppStorage("albumName") private var albumName = "Shoebox"
+    @AppStorage("photosPerSession") private var photosPerSession = 20
+    @AppStorage("albumName") private var albumName = "Kondobox"
     @Binding var selectedTab: Int
 
     var body: some View {
@@ -93,7 +93,7 @@ struct HomeView: View {
                         )
                         .padding(.top, 40)
 
-                    Text("Shoebox")
+                    Text("Kondobox")
                         .font(.system(size: 36, weight: .bold, design: .rounded))
 
                     Text("Declutter your photo library,\none swipe at a time")
@@ -203,18 +203,18 @@ struct HomeView: View {
 // MARK: - Help View
 
 struct HelpView: View {
-    @AppStorage("albumName") private var albumName = "Shoebox"
+    @AppStorage("albumName") private var albumName = "Kondobox"
 
     var body: some View {
         List {
             Section {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Shoebox helps you declutter your photo library by showing you random photos to sort through. Swipe or tap the buttons to decide what happens with each photo. Save a photo by swiping right which can allow you to make a list of photos to print, send to a family member or just have in an album.")
+                    Text("Kondobox helps you declutter your photo library by showing you random photos to sort through. Swipe or tap the buttons to decide what happens with each photo. Save a photo by swiping right which can allow you to make a list of photos to print, send to a family member or just have in an album.")
                         .font(.body)
                         .foregroundStyle(.secondary)
                 }
             } header: {
-                Text("About Shoebox")
+                Text("About Kondobox")
             }
 
             Section {

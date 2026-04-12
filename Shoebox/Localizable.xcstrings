@@ -143,60 +143,60 @@
     "50" : {
 
     },
-    "About Shoebox" : {
+    "About Kondobox" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Über Shoebox"
+            "value" : "Über Kondobox"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Acerca de Shoebox"
+            "value" : "Acerca de Kondobox"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "À propos de Shoebox"
+            "value" : "À propos de Kondobox"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Informazioni su Shoebox"
+            "value" : "Informazioni su Kondobox"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox について"
+            "value" : "Kondobox について"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox 정보"
+            "value" : "Kondobox 정보"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sobre o Shoebox"
+            "value" : "Sobre o Kondobox"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "О Shoebox"
+            "value" : "О Kondobox"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "关于 Shoebox"
+            "value" : "关于 Kondobox"
           }
         }
       }
@@ -665,60 +665,60 @@
         }
       }
     },
-    "Allow Photo Access" : {
+    "Back" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fotozugriff erlauben"
+            "value" : "Zurück"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Permitir acceso a fotos"
+            "value" : "Atrás"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser l'accès aux photos"
+            "value" : "Retour"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Consenti accesso alle foto"
+            "value" : "Indietro"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "写真へのアクセスを許可"
+            "value" : "戻る"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "사진 접근 허용"
+            "value" : "뒤로"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Permitir acesso às fotos"
+            "value" : "Voltar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Разрешить доступ к фото"
+            "value" : "Назад"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "允许访问照片"
+            "value" : "返回"
           }
         }
       }
@@ -781,6 +781,64 @@
         }
       }
     },
+    "Continue" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continua"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "続ける"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계속"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续"
+          }
+        }
+      }
+    },
     "Data" : {
       "localizations" : {
         "de" : {
@@ -839,60 +897,60 @@
         }
       }
     },
-    "Declutter your photo library with simple swipe gestures. Review 10 photos each week and keep your memories organized." : {
+    "Declutter your photo library with simple swipe gestures. Review 20 photos each week and keep your memories organized." : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Räume deine Fotobibliothek mit einfachen Wischgesten auf. Überprüfe jede Woche 10 Fotos und halte deine Erinnerungen organisiert."
+            "value" : "Räume deine Fotobibliothek mit einfachen Wischgesten auf. Überprüfe jede Woche 20 Fotos und halte deine Erinnerungen organisiert."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Organiza tu biblioteca de fotos con gestos simples. Revisa 10 fotos cada semana y mantén tus recuerdos en orden."
+            "value" : "Organiza tu biblioteca de fotos con gestos simples. Revisa 20 fotos cada semana y mantén tus recuerdos en orden."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rangez votre photothèque avec de simples gestes de balayage. Examinez 10 photos par semaine et gardez vos souvenirs bien organisés."
+            "value" : "Rangez votre photothèque avec de simples gestes de balayage. Examinez 20 photos par semaine et gardez vos souvenirs bien organisés."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Riordina la tua libreria foto con semplici gesti di scorrimento. Rivedi 10 foto ogni settimana e tieni i tuoi ricordi in ordine."
+            "value" : "Riordina la tua libreria foto con semplici gesti di scorrimento. Rivedi 20 foto ogni settimana e tieni i tuoi ricordi in ordine."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "シンプルなスワイプ操作で写真ライブラリを整理しましょう。毎週10枚の写真をレビューして、思い出を整理整頓。"
+            "value" : "シンプルなスワイプ操作で写真ライブラリを整理しましょう。毎週20枚の写真をレビューして、思い出を整理整頓。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "간단한 스와이프 제스처로 사진 라이브러리를 정리하세요. 매주 10장의 사진을 검토하고 추억을 깔끔하게 관리하세요."
+            "value" : "간단한 스와이프 제스처로 사진 라이브러리를 정리하세요. 매주 20장의 사진을 검토하고 추억을 깔끔하게 관리하세요."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Organize sua biblioteca de fotos com gestos simples. Revise 10 fotos por semana e mantenha suas memórias em ordem."
+            "value" : "Organize sua biblioteca de fotos com gestos simples. Revise 20 fotos por semana e mantenha suas memórias em ordem."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Наведите порядок в фотобиблиотеке простыми жестами смахивания. Просматривайте 10 фото в неделю и держите воспоминания в порядке."
+            "value" : "Наведите порядок в фотобиблиотеке простыми жестами смахивания. Просматривайте 20 фото в неделю и держите воспоминания в порядке."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "通过简单的滑动手势整理你的照片库。每周审阅 10 张照片，让你的回忆井井有条。"
+            "value" : "通过简单的滑动手势整理你的照片库。每周审阅 20 张照片，让你的回忆井井有条。"
           }
         }
       }
@@ -1531,64 +1589,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "启用"
-          }
-        }
-      }
-    },
-    "Enable Notifications" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Benachrichtigungen aktivieren"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activar notificaciones"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activer les notifications"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Attiva notifiche"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "通知を有効にする"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "알림 활성화"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ativar notificações"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Включить уведомления"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "启用通知"
           }
         }
       }
@@ -2981,6 +2981,238 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已保留"
+          }
+        }
+      }
+    },
+    "Kondobox" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox"
+          }
+        }
+      }
+    },
+    "Kondobox helps you declutter your photo library by showing you random photos to sort through. Swipe or tap the buttons to decide what happens with each photo. Save a photo by swiping right which can allow you to make a list of photos to print, send to a family member or just have in an album." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox hilft dir, deine Fotobibliothek aufzuräumen, indem es dir zufällige Fotos zum Sortieren zeigt. Wische oder tippe auf die Buttons, um über jedes Foto zu entscheiden. Speichere ein Foto durch Wischen nach rechts, um eine Liste zum Drucken, Versenden an Familie oder einfach für ein Album zu erstellen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox te ayuda a organizar tu biblioteca de fotos mostrándote fotos aleatorias para clasificar. Desliza o toca los botones para decidir qué hacer con cada foto. Guarda una foto deslizando a la derecha para crear una lista de fotos para imprimir, enviar a un familiar o simplemente tener en un álbum."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox vous aide à ranger votre photothèque en vous montrant des photos au hasard à trier. Balayez ou appuyez sur les boutons pour décider du sort de chaque photo. Sauvegardez une photo en balayant vers la droite pour créer une liste de photos à imprimer, envoyer à un proche ou simplement garder dans un album."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox ti aiuta a riordinare la tua libreria foto mostrandoti foto casuali da classificare. Scorri o tocca i pulsanti per decidere cosa fare con ogni foto. Salva una foto scorrendo a destra per creare un elenco di foto da stampare, inviare a un familiare o semplicemente conservare in un album."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox はランダムな写真を表示して、写真ライブラリの整理をお手伝いします。スワイプまたはボタンをタップして、各写真の処理を決めましょう。右にスワイプして写真を保存すれば、印刷用リストの作成、家族への送信、アルバムへの追加ができます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox는 무작위 사진을 보여주어 사진 라이브러리 정리를 도와줍니다. 스와이프하거나 버튼을 탭하여 각 사진의 처리를 결정하세요. 오른쪽으로 스와이프하여 사진을 저장하면 인쇄할 사진 목록을 만들거나, 가족에게 보내거나, 앨범에 보관할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Kondobox ajuda você a organizar sua biblioteca de fotos mostrando fotos aleatórias para classificar. Deslize ou toque nos botões para decidir o que fazer com cada foto. Salve uma foto deslizando para a direita para criar uma lista de fotos para imprimir, enviar a um familiar ou simplesmente ter em um álbum."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox помогает навести порядок в фотобиблиотеке, показывая случайные фотографии для сортировки. Смахивайте или нажимайте кнопки, чтобы решить судьбу каждого фото. Сохраните фото, смахнув вправо — так вы сможете создать список для печати, отправки родным или просто собрать в альбом."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox 通过展示随机照片帮助你整理照片库。滑动或点击按钮来决定每张照片的去向。向右滑动保存照片，可以创建打印清单、发送给家人或收藏到相册中。"
+          }
+        }
+      }
+    },
+    "Kondobox needs access to your photo library to show you images for review and to manage albums." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox benötigt Zugriff auf deine Fotobibliothek, um dir Bilder zur Überprüfung zu zeigen und Alben zu verwalten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox necesita acceso a tu biblioteca de fotos para mostrarte imágenes para revisar y gestionar álbumes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox a besoin d'accéder à votre photothèque pour vous montrer des images à examiner et gérer les albums."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox ha bisogno di accedere alla tua libreria foto per mostrarti le immagini da revisionare e gestire gli album."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox がレビュー用の画像を表示し、アルバムを管理するには、写真ライブラリへのアクセスが必要です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox가 검토할 이미지를 표시하고 앨범을 관리하려면 사진 라이브러리에 대한 접근이 필요합니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Kondobox precisa de acesso à sua biblioteca de fotos para mostrar imagens para revisão e gerenciar álbuns."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox необходим доступ к вашей фотобиблиотеке для показа изображений на просмотр и управления альбомами."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox 需要访问你的照片库来展示待审阅的图片并管理相簿。"
+          }
+        }
+      }
+    },
+    "Kondobox v1.2" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.2"
           }
         }
       }
@@ -4957,234 +5189,60 @@
         }
       }
     },
-    "Shoebox" : {
+    "Share" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
+            "value" : "Teilen"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
+            "value" : "Compartir"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
+            "value" : "Partager"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
+            "value" : "Condividi"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
+            "value" : "共有"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
+            "value" : "공유"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
+            "value" : "Compartilhar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
+            "value" : "Поделиться"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox"
-          }
-        }
-      }
-    },
-    "Shoebox helps you declutter your photo library by showing you random photos to sort through. Swipe or tap the buttons to decide what happens with each photo. Save a photo by swiping right which can allow you to make a list of photos to print, send to a family member or just have in an album." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox hilft dir, deine Fotobibliothek aufzuräumen, indem es dir zufällige Fotos zum Sortieren zeigt. Wische oder tippe auf die Buttons, um über jedes Foto zu entscheiden. Speichere ein Foto durch Wischen nach rechts, um eine Liste zum Drucken, Versenden an Familie oder einfach für ein Album zu erstellen."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox te ayuda a organizar tu biblioteca de fotos mostrándote fotos aleatorias para clasificar. Desliza o toca los botones para decidir qué hacer con cada foto. Guarda una foto deslizando a la derecha para crear una lista de fotos para imprimir, enviar a un familiar o simplemente tener en un álbum."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox vous aide à ranger votre photothèque en vous montrant des photos au hasard à trier. Balayez ou appuyez sur les boutons pour décider du sort de chaque photo. Sauvegardez une photo en balayant vers la droite pour créer une liste de photos à imprimer, envoyer à un proche ou simplement garder dans un album."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox ti aiuta a riordinare la tua libreria foto mostrandoti foto casuali da classificare. Scorri o tocca i pulsanti per decidere cosa fare con ogni foto. Salva una foto scorrendo a destra per creare un elenco di foto da stampare, inviare a un familiare o semplicemente conservare in un album."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox はランダムな写真を表示して、写真ライブラリの整理をお手伝いします。スワイプまたはボタンをタップして、各写真の処理を決めましょう。右にスワイプして写真を保存すれば、印刷用リストの作成、家族への送信、アルバムへの追加ができます。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox는 무작위 사진을 보여주어 사진 라이브러리 정리를 도와줍니다. 스와이프하거나 버튼을 탭하여 각 사진의 처리를 결정하세요. 오른쪽으로 스와이프하여 사진을 저장하면 인쇄할 사진 목록을 만들거나, 가족에게 보내거나, 앨범에 보관할 수 있습니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O Shoebox ajuda você a organizar sua biblioteca de fotos mostrando fotos aleatórias para classificar. Deslize ou toque nos botões para decidir o que fazer com cada foto. Salve uma foto deslizando para a direita para criar uma lista de fotos para imprimir, enviar a um familiar ou simplesmente ter em um álbum."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox помогает навести порядок в фотобиблиотеке, показывая случайные фотографии для сортировки. Смахивайте или нажимайте кнопки, чтобы решить судьбу каждого фото. Сохраните фото, смахнув вправо — так вы сможете создать список для печати, отправки родным или просто собрать в альбом."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox 通过展示随机照片帮助你整理照片库。滑动或点击按钮来决定每张照片的去向。向右滑动保存照片，可以创建打印清单、发送给家人或收藏到相册中。"
-          }
-        }
-      }
-    },
-    "Shoebox needs access to your photo library to show you images for review and to manage albums." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox benötigt Zugriff auf deine Fotobibliothek, um dir Bilder zur Überprüfung zu zeigen und Alben zu verwalten."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox necesita acceso a tu biblioteca de fotos para mostrarte imágenes para revisar y gestionar álbumes."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox a besoin d'accéder à votre photothèque pour vous montrer des images à examiner et gérer les albums."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox ha bisogno di accedere alla tua libreria foto per mostrarti le immagini da revisionare e gestire gli album."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox がレビュー用の画像を表示し、アルバムを管理するには、写真ライブラリへのアクセスが必要です。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox가 검토할 이미지를 표시하고 앨범을 관리하려면 사진 라이브러리에 대한 접근이 필요합니다."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O Shoebox precisa de acesso à sua biblioteca de fotos para mostrar imagens para revisão e gerenciar álbuns."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox необходим доступ к вашей фотобиблиотеке для показа изображений на просмотр и управления альбомами."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox 需要访问你的照片库来展示待审阅的图片并管理相簿。"
-          }
-        }
-      }
-    },
-    "Shoebox v1.0" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shoebox v1.0"
+            "value" : "分享"
           }
         }
       }
@@ -6295,60 +6353,60 @@
       "comment" : "A label displayed above the section that explains weekly reminders.",
       "isCommentAutoGenerated" : true
     },
-    "Welcome to Shoebox" : {
+    "Welcome to Kondobox" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Willkommen bei Shoebox"
+            "value" : "Willkommen bei Kondobox"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bienvenido a Shoebox"
+            "value" : "Bienvenido a Kondobox"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bienvenue dans Shoebox"
+            "value" : "Bienvenue dans Kondobox"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Benvenuto in Shoebox"
+            "value" : "Benvenuto in Kondobox"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox へようこそ"
+            "value" : "Kondobox へようこそ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox에 오신 것을 환영합니다"
+            "value" : "Kondobox에 오신 것을 환영합니다"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bem-vindo ao Shoebox"
+            "value" : "Bem-vindo ao Kondobox"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Добро пожаловать в Shoebox"
+            "value" : "Добро пожаловать в Kondobox"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "欢迎使用 Shoebox"
+            "value" : "欢迎使用 Kondobox"
           }
         }
       }
@@ -6643,60 +6701,60 @@
         }
       }
     },
-    "You've given Shoebox access to selected photos only. Tap to change which photos are accessible." : {
+    "You've given Kondobox access to selected photos only. Tap to change which photos are accessible." : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Du hast Shoebox nur Zugriff auf ausgewählte Fotos gewährt. Tippe, um zu ändern, auf welche Fotos zugegriffen werden kann."
+            "value" : "Du hast Kondobox nur Zugriff auf ausgewählte Fotos gewährt. Tippe, um zu ändern, auf welche Fotos zugegriffen werden kann."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Le has dado a Shoebox acceso solo a fotos seleccionadas. Toca para cambiar qué fotos son accesibles."
+            "value" : "Le has dado a Kondobox acceso solo a fotos seleccionadas. Toca para cambiar qué fotos son accesibles."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous avez donné à Shoebox l'accès aux photos sélectionnées uniquement. Touchez pour modifier les photos accessibles."
+            "value" : "Vous avez donné à Kondobox l'accès aux photos sélectionnées uniquement. Touchez pour modifier les photos accessibles."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hai concesso a Shoebox l'accesso solo alle foto selezionate. Tocca per modificare le foto accessibili."
+            "value" : "Hai concesso a Kondobox l'accesso solo alle foto selezionate. Tocca per modificare le foto accessibili."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox には選択した写真のみのアクセスを許可しています。アクセスできる写真を変更するにはタップしてください。"
+            "value" : "Kondobox には選択した写真のみのアクセスを許可しています。アクセスできる写真を変更するにはタップしてください。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shoebox에 선택한 사진에 대한 접근만 허용했습니다. 접근 가능한 사진을 변경하려면 탭하세요."
+            "value" : "Kondobox에 선택한 사진에 대한 접근만 허용했습니다. 접근 가능한 사진을 변경하려면 탭하세요."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Você concedeu ao Shoebox acesso apenas a fotos selecionadas. Toque para alterar quais fotos estão acessíveis."
+            "value" : "Você concedeu ao Kondobox acesso apenas a fotos selecionadas. Toque para alterar quais fotos estão acessíveis."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Вы предоставили Shoebox доступ только к выбранным фото. Нажмите, чтобы изменить доступные фотографии."
+            "value" : "Вы предоставили Kondobox доступ только к выбранным фото. Нажмите, чтобы изменить доступные фотографии."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你仅授予了 Shoebox 对选定照片的访问权限。点击以更改可访问的照片。"
+            "value" : "你仅授予了 Kondobox 对选定照片的访问权限。点击以更改可访问的照片。"
           }
         }
       }

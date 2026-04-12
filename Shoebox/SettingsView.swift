@@ -16,8 +16,8 @@ import Photos
 struct SettingsView: View {
     @EnvironmentObject var photoManager: PhotoManager
     @EnvironmentObject var notificationManager: NotificationManager
-    @AppStorage("photosPerSession") private var photosPerSession = 10
-    @AppStorage("albumName") private var albumName = "Shoebox"
+    @AppStorage("photosPerSession") private var photosPerSession = 20
+    @AppStorage("albumName") private var albumName = "Kondobox"
     @AppStorage("reviewFrequencyDays") private var reviewFrequencyDays = 7
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = true
     @State private var showResetConfirmation = false
@@ -127,7 +127,7 @@ struct SettingsView: View {
                 Text("Privacy")
             } footer: {
                 if photoManager.authorizationStatus == .limited {
-                    Text("You've given Shoebox access to selected photos only. Tap to change which photos are accessible.")
+                    Text("You've given Kondobox access to selected photos only. Tap to change which photos are accessible.")
                 } else {
                     Text("Manage photo library access in system Settings.")
                 }
@@ -213,7 +213,7 @@ struct SettingsView: View {
                 Text("\(photoManager.reviewedCount) photos reviewed so far.\nResetting lets you see previously reviewed photos again.")
                     .padding(.bottom, 8)
 
-                Text("Shoebox v1.0")
+                Text("Kondobox v1.2")
                     .frame(maxWidth: .infinity)
             }
         }
