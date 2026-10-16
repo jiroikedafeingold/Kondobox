@@ -1,0 +1,11 @@
+New, simpler swipe gestures:
+- Swipe left to delete
+- Swipe right to keep
+- Swipe up to save to your album
+- Swipe down to favorite
+
+Clear arrow icons now show which way to swipe, and the overlay names the action as you swipe.
+
+Fixed an issue where the review screen could appear cut off when Button Shapes or larger text sizes were turned on.
+
+The gesture guide now lives in the Help tab.
