@@ -164,6 +164,8 @@ struct ReviewView: View {
         // widen the row past the screen and push the whole layout off-screen.
         .buttonStyle(.plain)
         .padding(.horizontal, 12)
+        // Keep the buttons grouped on wide screens (iPad) instead of spreading edge to edge.
+        .frame(maxWidth: 520)
         .padding(.bottom, 24)
         .padding(.top, 12)
         .sheet(isPresented: $showShareSheet) {
