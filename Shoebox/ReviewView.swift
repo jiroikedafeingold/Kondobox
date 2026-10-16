@@ -152,14 +152,18 @@ struct ReviewView: View {
     }
 
     private var swipeHintsView: some View {
-        HStack(spacing: 16) {
+        HStack(spacing: 8) {
             backButton
-            actionButton(icon: "hand.point.left.fill", text: "Keep", color: .green, direction: .left)
-            actionButton(icon: "hand.point.up.fill", text: "Delete", color: .red, direction: .up)
-            actionButton(icon: "hand.point.down.fill", text: "Fave", color: .yellow, direction: .down)
-            actionButton(icon: "hand.draw.fill", text: "Save", color: .blue, direction: .right)
+            actionButton(icon: "arrow.left", text: "Delete", color: .red, direction: .left)
+            actionButton(icon: "arrow.up", text: "Save", color: .blue, direction: .up)
+            actionButton(icon: "arrow.down", text: "Fave", color: .yellow, direction: .down)
+            actionButton(icon: "arrow.right", text: "Keep", color: .green, direction: .right)
             shareButton
         }
+        // Plain style so the system doesn't add its own button chrome, which can
+        // widen the row past the screen and push the whole layout off-screen.
+        .buttonStyle(.plain)
+        .padding(.horizontal, 12)
         .padding(.bottom, 24)
         .padding(.top, 12)
         .sheet(isPresented: $showShareSheet) {
@@ -183,7 +187,10 @@ struct ReviewView: View {
                 Text("Back")
                     .font(.caption2.weight(.medium))
                     .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
+            .frame(maxWidth: .infinity)
         }
         .disabled(history.isEmpty)
         .opacity(history.isEmpty ? 0.4 : 1.0)
@@ -210,7 +217,10 @@ struct ReviewView: View {
                 Text("Share")
                     .font(.caption2.weight(.medium))
                     .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
+            .frame(maxWidth: .infinity)
         }
         .disabled(photoManager.photos.isEmpty)
     }
@@ -231,7 +241,10 @@ struct ReviewView: View {
                 Text(text)
                     .font(.caption2.weight(.medium))
                     .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
+            .frame(maxWidth: .infinity)
         }
         .disabled(photoManager.photos.isEmpty)
     }
@@ -277,10 +290,10 @@ struct ReviewView: View {
 
             // Stats row
             HStack(spacing: 16) {
-                statBadge(count: stats.kept, label: "Kept", color: .green, icon: "hand.point.left.fill")
-                statBadge(count: stats.saved, label: "Saved", color: .blue, icon: "hand.draw.fill")
-                statBadge(count: stats.favorited, label: "Faved", color: .yellow, icon: "hand.point.down.fill")
-                statBadge(count: stats.deleted, label: "Deleted", color: .red, icon: "hand.point.up.fill")
+                statBadge(count: stats.kept, label: "Kept", color: .green, icon: "arrow.right")
+                statBadge(count: stats.saved, label: "Saved", color: .blue, icon: "arrow.up")
+                statBadge(count: stats.favorited, label: "Faved", color: .yellow, icon: "arrow.down")
+                statBadge(count: stats.deleted, label: "Deleted", color: .red, icon: "arrow.left")
             }
             .padding(.top, 4)
             .opacity(celebrationOpacity)
@@ -388,7 +401,7 @@ struct ReviewView: View {
 
     private func handleSwipe(direction: PhotoCardView.SwipeDirection, item: PhotoItem) {
         switch direction {
-        case .right:
+        case .up:
             photoManager.photos.removeAll { $0.id == item.id }
             Task {
                 let saved = await photoManager.addToAlbum(item)
@@ -400,12 +413,12 @@ struct ReviewView: View {
                 }
                 checkCompletion()
             }
-        case .left:
+        case .right:
             photoManager.removeFromQueue(item)
             stats.kept += 1
             history.append((item: item, direction: direction))
             checkCompletion()
-        case .up:
+        case .left:
             photoManager.photos.removeAll { $0.id == item.id }
             Task {
                 let deleted = await photoManager.deletePhoto(item)
@@ -437,9 +450,9 @@ struct ReviewView: View {
 
         // Undo the stat
         switch last.direction {
-        case .right: stats.saved -= 1
-        case .left: stats.kept -= 1
-        case .up: stats.deleted -= 1
+        case .up: stats.saved -= 1
+        case .right: stats.kept -= 1
+        case .left: stats.deleted -= 1
         case .down: stats.favorited -= 1
         }
 

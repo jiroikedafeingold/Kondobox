@@ -318,6 +318,7 @@
       }
     },
     "Add to Favorites" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1246,6 +1247,7 @@
       }
     },
     "Delete photo" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2812,6 +2814,7 @@
       }
     },
     "Keep photo" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3044,6 +3047,7 @@
       }
     },
     "Kondobox helps you declutter your photo library by showing you random photos to sort through. Swipe or tap the buttons to decide what happens with each photo. Save a photo by swiping right which can allow you to make a list of photos to print, send to a family member or just have in an album." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3097,6 +3101,64 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kondobox 通过展示随机照片帮助你整理照片库。滑动或点击按钮来决定每张照片的去向。向右滑动保存照片，可以创建打印清单、发送给家人或收藏到相册中。"
+          }
+        }
+      }
+    },
+    "Kondobox helps you declutter your photo library by showing you random photos to sort through. Swipe or tap the buttons to decide what happens with each photo. Save a photo by swiping up which can allow you to make a list of photos to print, send to a family member or just have in an album." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox hilft dir, deine Fotobibliothek aufzuräumen, indem es dir zufällige Fotos zum Sortieren zeigt. Wische oder tippe auf die Buttons, um über jedes Foto zu entscheiden. Speichere ein Foto durch Wischen nach oben, um eine Liste zum Drucken, Versenden an Familie oder einfach für ein Album zu erstellen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox te ayuda a organizar tu biblioteca de fotos mostrándote fotos aleatorias para clasificar. Desliza o toca los botones para decidir qué hacer con cada foto. Guarda una foto deslizando hacia arriba para crear una lista de fotos para imprimir, enviar a un familiar o simplemente tener en un álbum."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox vous aide à ranger votre photothèque en vous montrant des photos au hasard à trier. Balayez ou appuyez sur les boutons pour décider du sort de chaque photo. Sauvegardez une photo en balayant vers le haut pour créer une liste de photos à imprimer, envoyer à un proche ou simplement garder dans un album."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox ti aiuta a riordinare la tua libreria foto mostrandoti foto casuali da classificare. Scorri o tocca i pulsanti per decidere cosa fare con ogni foto. Salva una foto scorrendo verso l'alto per creare un elenco di foto da stampare, inviare a un familiare o semplicemente conservare in un album."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox はランダムな写真を表示して、写真ライブラリの整理をお手伝いします。スワイプまたはボタンをタップして、各写真の処理を決めましょう。上にスワイプして写真を保存すれば、印刷用リストの作成、家族への送信、アルバムへの追加ができます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox는 무작위 사진을 보여주어 사진 라이브러리 정리를 도와줍니다. 스와이프하거나 버튼을 탭하여 각 사진의 처리를 결정하세요. 위로 스와이프하여 사진을 저장하면 인쇄할 사진 목록을 만들거나, 가족에게 보내거나, 앨범에 보관할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Kondobox ajuda você a organizar sua biblioteca de fotos mostrando fotos aleatórias para classificar. Deslize ou toque nos botões para decidir o que fazer com cada foto. Salve uma foto deslizando para cima para criar uma lista de fotos para imprimir, enviar a um familiar ou simplesmente ter em um álbum."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox помогает навести порядок в фотобиблиотеке, показывая случайные фотографии для сортировки. Смахивайте или нажимайте кнопки, чтобы решить судьбу каждого фото. Сохраните фото, смахнув вверх — так вы сможете создать список для печати, отправки родным или просто собрать в альбом."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox 通过展示随机照片帮助你整理照片库。滑动或点击按钮来决定每张照片的去向。向上滑动保存照片，可以创建打印清单、发送给家人或收藏到相册中。"
           }
         }
       }
@@ -3160,6 +3222,7 @@
       }
     },
     "Kondobox v1.2" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3213,6 +3276,64 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kondobox v1.2"
+          }
+        }
+      }
+    },
+    "Kondobox v1.3" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kondobox v1.3"
           }
         }
       }
@@ -4784,6 +4905,7 @@
       }
     },
     "Save to album" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5537,7 +5659,66 @@
         }
       }
     },
+    "Swipe Left — Delete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach links wischen — Löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslizar a la izquierda — Eliminar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer vers la gauche — Supprimer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri verso sinistra — Elimina"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左にスワイプ — 削除"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "왼쪽으로 스와이프 — 삭제"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslizar para a esquerda — Apagar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смахнуть влево — Удалить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向左滑动 — 删除"
+          }
+        }
+      }
+    },
     "Swipe Left — Keep" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5595,7 +5776,66 @@
         }
       }
     },
+    "Swipe left to delete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach links wischen zum Löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desliza a la izquierda para eliminar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayez vers la gauche pour supprimer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri verso sinistra per eliminare"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左にスワイプして削除"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "왼쪽으로 스와이프하여 삭제"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslize para a esquerda para apagar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смахните влево, чтобы удалить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向左滑动删除"
+          }
+        }
+      }
+    },
     "Swipe left to keep" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5711,7 +5951,66 @@
         }
       }
     },
+    "Swipe Right — Keep" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach rechts wischen — Behalten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslizar a la derecha — Conservar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer vers la droite — Garder"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri verso destra — Tieni"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右にスワイプ — 保持"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오른쪽으로 스와이프 — 유지"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslizar para a direita — Manter"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смахнуть вправо — Оставить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向右滑动 — 保留"
+          }
+        }
+      }
+    },
     "Swipe Right — Save" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5769,7 +6068,66 @@
         }
       }
     },
+    "Swipe right to keep" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach rechts wischen zum Behalten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desliza a la derecha para conservar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayez vers la droite pour garder"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri verso destra per tenere"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右にスワイプして保持"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오른쪽으로 스와이프하여 유지"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslize para a direita para manter"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смахните вправо, чтобы оставить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向右滑动保留"
+          }
+        }
+      }
+    },
     "Swipe right to save to album" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6002,6 +6360,7 @@
       }
     },
     "Swipe Up — Delete" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6059,7 +6418,66 @@
         }
       }
     },
+    "Swipe Up — Save" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach oben wischen — Sichern"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslizar hacia arriba — Guardar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer vers le haut — Enregistrer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri verso l'alto — Salva"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上にスワイプ — 保存"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위로 스와이프 — 저장"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslizar para cima — Salvar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смахнуть вверх — Сохранить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向上滑动 — 保存"
+          }
+        }
+      }
+    },
     "Swipe up to delete" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -6113,6 +6531,64 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "向上滑动删除"
+          }
+        }
+      }
+    },
+    "Swipe up to save to album" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach oben wischen zum Sichern im Album"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desliza hacia arriba para guardar en álbum"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayez vers le haut pour enregistrer dans l'album"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scorri verso l'alto per salvare nell'album"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上にスワイプしてアルバムに保存"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위로 스와이프하여 앨범에 저장"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deslize para cima para salvar no álbum"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смахните вверх, чтобы сохранить в альбом"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向上滑动保存到相簿"
           }
         }
       }

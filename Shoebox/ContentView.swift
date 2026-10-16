@@ -141,25 +141,25 @@ struct HomeView: View {
 
                     VStack(spacing: 16) {
                         instructionRow(
-                            icon: "hand.draw.fill",
-                            iconColor: .blue,
-                            title: "Swipe Right",
-                            description: "Save to your \(albumName) album"
-                        )
-                        instructionRow(
-                            icon: "hand.point.left.fill",
-                            iconColor: .green,
-                            title: "Swipe Left",
-                            description: "Keep and move on"
-                        )
-                        instructionRow(
-                            icon: "hand.point.up.fill",
+                            icon: "arrow.left",
                             iconColor: .red,
-                            title: "Swipe Up",
+                            title: "Swipe Left",
                             description: "Delete from your library"
                         )
                         instructionRow(
-                            icon: "hand.point.down.fill",
+                            icon: "arrow.right",
+                            iconColor: .green,
+                            title: "Swipe Right",
+                            description: "Keep and move on"
+                        )
+                        instructionRow(
+                            icon: "arrow.up",
+                            iconColor: .blue,
+                            title: "Swipe Up",
+                            description: "Save to your \(albumName) album"
+                        )
+                        instructionRow(
+                            icon: "arrow.down",
                             iconColor: .yellow,
                             title: "Swipe Down",
                             description: "Add to your Favorites"
@@ -209,7 +209,7 @@ struct HelpView: View {
         List {
             Section {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Kondobox helps you declutter your photo library by showing you random photos to sort through. Swipe or tap the buttons to decide what happens with each photo. Save a photo by swiping right which can allow you to make a list of photos to print, send to a family member or just have in an album.")
+                    Text("Kondobox helps you declutter your photo library by showing you random photos to sort through. Swipe or tap the buttons to decide what happens with each photo. Save a photo by swiping up which can allow you to make a list of photos to print, send to a family member or just have in an album.")
                         .font(.body)
                         .foregroundStyle(.secondary)
                 }
@@ -219,25 +219,25 @@ struct HelpView: View {
 
             Section {
                 helpRow(
-                    icon: "hand.draw.fill",
-                    iconColor: .blue,
-                    title: "Swipe Right — Save",
-                    description: "Saves the photo to your \"\(albumName)\" album. The photo stays in your library and is also added to the album."
-                )
-                helpRow(
-                    icon: "hand.point.left.fill",
-                    iconColor: .green,
-                    title: "Swipe Left — Keep",
-                    description: "Keeps the photo in your library as-is and moves to the next one. It won't be shown again in future reviews."
-                )
-                helpRow(
-                    icon: "hand.point.up.fill",
+                    icon: "arrow.left",
                     iconColor: .red,
-                    title: "Swipe Up — Delete",
+                    title: "Swipe Left — Delete",
                     description: "Deletes the photo from your library. Your device will ask you to confirm before deleting."
                 )
                 helpRow(
-                    icon: "hand.point.down.fill",
+                    icon: "arrow.right",
+                    iconColor: .green,
+                    title: "Swipe Right — Keep",
+                    description: "Keeps the photo in your library as-is and moves to the next one. It won't be shown again in future reviews."
+                )
+                helpRow(
+                    icon: "arrow.up",
+                    iconColor: .blue,
+                    title: "Swipe Up — Save",
+                    description: "Saves the photo to your \"\(albumName)\" album. The photo stays in your library and is also added to the album."
+                )
+                helpRow(
+                    icon: "arrow.down",
                     iconColor: .yellow,
                     title: "Swipe Down — Favorite",
                     description: "Marks the photo as a Favorite in your library. Favorited photos won't appear in future reviews."

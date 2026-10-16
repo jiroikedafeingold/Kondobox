@@ -27,9 +27,9 @@ struct PhotoCardView: View {
     private let swipeThreshold: CGFloat = 100
 
     enum SwipeDirection {
-        case left   // keep (skip)
-        case right  // save to album
-        case up     // delete
+        case left   // delete
+        case right  // keep (skip)
+        case up     // save to album
         case down   // favorite
     }
 
@@ -91,66 +91,43 @@ struct PhotoCardView: View {
     @ViewBuilder
     private var overlayIndicator: some View {
         ZStack {
-            // Right swipe - Save
+            // Right swipe - Keep
             if offset.width > 30 {
-                VStack {
-                    Image(systemName: "square.and.arrow.down.fill")
-                        .font(.system(size: 48, weight: .bold))
-                    Text("SAVE")
-                        .font(.system(size: 24, weight: .heavy))
-                }
-                .foregroundStyle(.blue)
-                .padding(20)
-                .background(.ultraThinMaterial)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .opacity(min(Double(offset.width) / 100, 1))
+                arrowIndicator("arrow.right", label: "KEEP", color: .green)
+                    .opacity(min(Double(offset.width) / 100, 1))
             }
 
-            // Left swipe - Keep
+            // Left swipe - Delete
             if offset.width < -30 {
-                VStack {
-                    Image(systemName: "forward.fill")
-                        .font(.system(size: 48, weight: .bold))
-                    Text("KEEP")
-                        .font(.system(size: 24, weight: .heavy))
-                }
-                .foregroundStyle(.green)
-                .padding(20)
-                .background(.ultraThinMaterial)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .opacity(min(Double(-offset.width) / 100, 1))
+                arrowIndicator("arrow.left", label: "DELETE", color: .red)
+                    .opacity(min(Double(-offset.width) / 100, 1))
             }
 
-            // Up swipe - Delete
+            // Up swipe - Save
             if offset.height < -30 && abs(offset.height) > abs(offset.width) {
-                VStack {
-                    Image(systemName: "trash.fill")
-                        .font(.system(size: 48, weight: .bold))
-                    Text("DELETE")
-                        .font(.system(size: 24, weight: .heavy))
-                }
-                .foregroundStyle(.red)
-                .padding(20)
-                .background(.ultraThinMaterial)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .opacity(min(Double(-offset.height) / 100, 1))
+                arrowIndicator("arrow.up", label: "SAVE", color: .blue)
+                    .opacity(min(Double(-offset.height) / 100, 1))
             }
 
             // Down swipe - Favorite
             if offset.height > 30 && abs(offset.height) > abs(offset.width) {
-                VStack {
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 48, weight: .bold))
-                    Text("FAVORITE")
-                        .font(.system(size: 24, weight: .heavy))
-                }
-                .foregroundStyle(.yellow)
-                .padding(20)
-                .background(.ultraThinMaterial)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .opacity(min(Double(offset.height) / 100, 1))
+                arrowIndicator("arrow.down", label: "FAVORITE", color: .yellow)
+                    .opacity(min(Double(offset.height) / 100, 1))
             }
         }
+    }
+
+    private func arrowIndicator(_ systemName: String, label: LocalizedStringKey, color: Color) -> some View {
+        VStack {
+            Image(systemName: systemName)
+                .font(.system(size: 64, weight: .bold))
+            Text(label)
+                .font(.system(size: 24, weight: .heavy))
+        }
+        .foregroundStyle(color)
+        .padding(24)
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
     private func handleSwipeEnd(gesture: DragGesture.Value) {
@@ -160,7 +137,7 @@ struct PhotoCardView: View {
 
         // Vertical swipes take priority when the gesture is more vertical
         if isVertical && verticalAmount < -swipeThreshold {
-            // Up - delete
+            // Up - save
             withAnimation(.easeOut(duration: 0.3)) {
                 offset = CGSize(width: 0, height: -800)
                 opacity = 0

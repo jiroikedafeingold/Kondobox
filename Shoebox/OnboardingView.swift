@@ -211,10 +211,10 @@ struct OnboardingView: View {
                 .font(.title.bold())
 
             VStack(alignment: .leading, spacing: 16) {
-                featureRow(icon: "hand.draw.fill", color: .blue, text: "Swipe right to save to album")
-                featureRow(icon: "hand.point.left.fill", color: .green, text: "Swipe left to keep")
-                featureRow(icon: "hand.point.up.fill", color: .red, text: "Swipe up to delete")
-                featureRow(icon: "hand.point.down.fill", color: .yellow, text: "Swipe down to favorite")
+                featureRow(icon: "arrow.left", color: .red, text: "Swipe left to delete")
+                featureRow(icon: "arrow.right", color: .green, text: "Swipe right to keep")
+                featureRow(icon: "arrow.up", color: .blue, text: "Swipe up to save to album")
+                featureRow(icon: "arrow.down", color: .yellow, text: "Swipe down to favorite")
             }
             .padding(.horizontal, 32)
 

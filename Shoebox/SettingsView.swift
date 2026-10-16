@@ -6,8 +6,8 @@
 //  Copyright (c) 2026 Jiro Feingold. All rights reserved.
 //
 //  App settings screen. Configures photos per session, album name,
-//  notification frequency, photo library access, and provides a
-//  gesture reference guide and review history reset.
+//  notification frequency, photo library access, and review
+//  history reset.
 //
 
 import SwiftUI
@@ -134,58 +134,6 @@ struct SettingsView: View {
             }
 
             Section {
-                HStack {
-                    Label {
-                        Text("Swipe Right")
-                    } icon: {
-                        Image(systemName: "arrow.right")
-                            .foregroundStyle(.blue)
-                    }
-                    Spacer()
-                    Text("Save to album")
-                        .foregroundStyle(.secondary)
-                }
-
-                HStack {
-                    Label {
-                        Text("Swipe Left")
-                    } icon: {
-                        Image(systemName: "arrow.left")
-                            .foregroundStyle(.green)
-                    }
-                    Spacer()
-                    Text("Keep photo")
-                        .foregroundStyle(.secondary)
-                }
-
-                HStack {
-                    Label {
-                        Text("Swipe Up")
-                    } icon: {
-                        Image(systemName: "arrow.up")
-                            .foregroundStyle(.red)
-                    }
-                    Spacer()
-                    Text("Delete photo")
-                        .foregroundStyle(.secondary)
-                }
-
-                HStack {
-                    Label {
-                        Text("Swipe Down")
-                    } icon: {
-                        Image(systemName: "arrow.down")
-                            .foregroundStyle(.yellow)
-                    }
-                    Spacer()
-                    Text("Add to Favorites")
-                        .foregroundStyle(.secondary)
-                }
-            } header: {
-                Text("Gestures")
-            }
-
-            Section {
                 Button("Reset Review History") {
                     showResetConfirmation = true
                 }
@@ -213,7 +161,7 @@ struct SettingsView: View {
                 Text("\(photoManager.reviewedCount) photos reviewed so far.\nResetting lets you see previously reviewed photos again.")
                     .padding(.bottom, 8)
 
-                Text("Kondobox v1.2")
+                Text("Kondobox v1.3")
                     .frame(maxWidth: .infinity)
             }
         }
