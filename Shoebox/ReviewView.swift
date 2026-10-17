@@ -11,6 +11,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct ReviewView: View {
     @EnvironmentObject var photoManager: PhotoManager
@@ -24,6 +25,9 @@ struct ReviewView: View {
     @State private var history: [(item: PhotoItem, direction: PhotoCardView.SwipeDirection)] = []
     @State private var shareImage: UIImage?
     @State private var showShareSheet = false
+    @AppStorage("completedSessionCount") private var completedSessionCount = 0
+    @AppStorage("lastVersionPromptedForReview") private var lastVersionPromptedForReview = ""
+    @Environment(\.requestReview) private var requestReview
 
     struct ReviewStats {
         var kept = 0
@@ -483,6 +487,23 @@ struct ReviewView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 showConfetti = true
             }
+            completedSessionCount += 1
+            requestReviewIfAppropriate()
+        }
+    }
+
+    /// Asks for an App Store review on the celebration screen once the person has
+    /// completed a few sessions, at most once per app version. StoreKit also
+    /// rate-limits the prompt, so it may not appear even when requested.
+    private func requestReviewIfAppropriate() {
+        let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+        guard completedSessionCount >= 3, currentVersion != lastVersionPromptedForReview else { return }
+        Task {
+            // Let the celebration and confetti play before the prompt appears.
+            try? await Task.sleep(for: .seconds(2))
+            guard reviewComplete else { return }
+            lastVersionPromptedForReview = currentVersion
+            requestReview()
         }
     }
 }

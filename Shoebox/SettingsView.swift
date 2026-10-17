@@ -161,7 +161,7 @@ struct SettingsView: View {
                 Text("\(photoManager.reviewedCount) photos reviewed so far.\nResetting lets you see previously reviewed photos again.")
                     .padding(.bottom, 8)
 
-                Text("Kondobox v1.3")
+                Text("Kondobox v1.3.1")
                     .frame(maxWidth: .infinity)
             }
         }
